@@ -18,8 +18,8 @@ const languageTranslator = new LanguageTranslatorV3({
   
   languageTranslator.translate(translateParams)
     .then(translationResult => {
-      message.body(`${msgToTranslate} to Gaelic is: ${translationResult.result.translations[0].translation}`);
-      message.media("https://www.worldatlas.com/r/w1200/upload/b3/28/8f/happy-st-patricks-day-3946675-1920.png");
+      message.body(`"${msgToTranslate}" translated to Gaelic is: ${translationResult.result.translations[0].translation}`);
+      // message.media("https://www.worldatlas.com/r/w1200/upload/b3/28/8f/happy-st-patricks-day-3946675-1920.png");
       callback(null, twiml);
     })
     .catch(err => {
